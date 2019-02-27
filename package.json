@@ -1,0 +1,22 @@
+{
+  "name": "autocomplete-es6",
+  "version": "0.1.0",
+  "description": "Autocomplete using a trie data structure, written with modern JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "autocomplete",
+    "autosuggest"
+  ],
+  "author": "Alex Garrett",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.1.0"
+  }
+}
