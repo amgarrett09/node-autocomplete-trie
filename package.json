@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete-trie",
+  "name": "trie-autocomplete",
   "version": "0.1.0",
   "description": "A fast and lightweight autocomplete library using a trie data structure.",
   "main": "index.js",
@@ -8,7 +8,10 @@
   },
   "keywords": [
     "autocomplete",
-    "autosuggest"
+    "autosuggest",
+    "trie autocomplete",
+    "trie autosuggest",
+    "autocompletion"
   ],
   "author": "Alex Garrett",
   "license": "MIT",
