@@ -1,14 +1,14 @@
 /* eslint-disable no-undef */
-const { Trie } = require('../lib/trie');
+const AutoComplete = require('../index');
 
 test('empty tree contains no children', () => {
-  const trie = new Trie();
+  const trie = new AutoComplete();
 
   expect(trie.root.children).toEqual([]);
 });
 
 test('add method works', () => {
-  const trie = new Trie();
+  const trie = new AutoComplete();
   trie.add('hello');
 
   // Root should have one child
@@ -42,7 +42,7 @@ test('add method works', () => {
 });
 
 test('contains method works', () => {
-  const trie = new Trie();
+  const trie = new AutoComplete();
 
   expect(trie.contains('')).toBe(false);
 
@@ -66,7 +66,7 @@ test('contains method works', () => {
 });
 
 test('delete method works', () => {
-  const trie = new Trie();
+  const trie = new AutoComplete();
 
   trie.add('hi');
   expect(trie.contains('hi')).toBe(true);
@@ -107,7 +107,7 @@ test('delete method works', () => {
 });
 
 test('suggest method works', () => {
-  const trie = new Trie();
+  const trie = new AutoComplete();
 
   trie.add('hello');
   trie.add('help');

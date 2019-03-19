@@ -1,7 +1,7 @@
 {
-  "name": "autocomplete-es6",
+  "name": "autocomplete-trie",
   "version": "0.1.0",
-  "description": "Autocomplete using a trie data structure, written with modern JavaScript",
+  "description": "A fast and lightweight autocomplete library using a trie data structure.",
   "main": "index.js",
   "scripts": {
     "test": "jest"

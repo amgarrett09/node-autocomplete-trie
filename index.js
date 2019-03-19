@@ -7,21 +7,21 @@ class TrieNode {
   }
 }
 
-class Trie {
+class AutoComplete {
   constructor() {
     this.root = new TrieNode('');
   }
 
   add(word) {
-    const chars = word.split('');
     let current = this.root;
 
-    chars.forEach((ch) => {
+    for (let i = 0; i < word.length; i += 1) {
+      const ch = word[i];
       let found = false;
 
       // Search all children for the character we're looking for
-      for (let i = 0; i < current.children.length; i += 1) {
-        const child = current.children[i];
+      for (let j = 0; j < current.children.length; j += 1) {
+        const child = current.children[j];
         // If we find it, change current node to that child
         if (child.char === ch) {
           found = true;
@@ -41,19 +41,18 @@ class Trie {
         // On next iteration, start at node we just created
         current = newNode;
       }
-    });
+    }
 
     // Set last created node to be a valid keyword endpoint
     current.validWord = true;
   }
 
   contains(word) {
-    const chars = word.split('');
     let current = this.root;
 
     // For each char in the word
-    for (let i = 0; i < chars.length; i += 1) {
-      const ch = chars[i];
+    for (let i = 0; i < word.length; i += 1) {
+      const ch = word[i];
       let found = false;
 
       // Search each child of the current node
@@ -76,11 +75,10 @@ class Trie {
   }
 
   delete(word) {
-    const chars = word.split('');
     let current = this.root;
 
-    for (let i = 0; i < chars.length; i += 1) {
-      const ch = chars[i];
+    for (let i = 0; i < word.length; i += 1) {
+      const ch = word[i];
       let found = false;
 
       for (let j = 0; j < current.children.length; j += 1) {
@@ -163,8 +161,8 @@ class Trie {
       tracker.push(node.char);
 
       if (node.validWord) {
-        // Put letters in tracker on end of snippet, and push into suggestions
-        const temp = chars.slice(0, chars.length - 1);
+        // Put letters in tracker on end of input snippet, and push into suggestions
+        const temp = chars.slice(0, snip.length - 1);
         temp.push(...tracker);
         suggestions.push(temp.join(''));
       }
@@ -181,6 +179,4 @@ class Trie {
   }
 }
 
-module.exports = {
-  Trie,
-};
+module.exports = AutoComplete;
