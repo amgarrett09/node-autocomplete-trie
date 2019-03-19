@@ -16,7 +16,7 @@ later.
 
 Example:
 
-```
+```javascript
 // Create a new AutoComplete trie
 const trie = new AutoComplete();
 
@@ -31,7 +31,7 @@ Tests if the AutoComplete trie contains a given word. REturns a boolean.
 
 Example:
 
-```
+```javascript
 // Create an empty AutoComplete trie
 const trie = new AutoComplete();
 
@@ -54,7 +54,7 @@ from the search.
 
 Example:
 
-```
+```javascript
 // Create empty AutoComplete trie
 const trie = new AutoComplete();
 
