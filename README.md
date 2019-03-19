@@ -66,6 +66,5 @@ trie.add('happy');
 trie.add('cat');
 trie.add('catastrophe');
 
-/* Get suggestions for the prefix 'he'.
-The array will look like: ['hello', 'helium', 'help'] */
-const suggestions = trie.suggest('he');
+// Get suggestions for the prefix 'he'.
+const suggestions = trie.suggest('he'); // ['hello', 'helium', 'help']
