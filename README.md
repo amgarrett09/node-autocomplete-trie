@@ -5,7 +5,7 @@ autocomplete suggestions.
 
 ## Usage
 ```javascript
-const AutoComplete = require('autocomplete-trie');
+const AutoComplete = require('trie-autocomplete');
 const trie = new AutoComplete();
 ```
 

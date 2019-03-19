@@ -11,7 +11,8 @@
     "autosuggest",
     "trie autocomplete",
     "trie autosuggest",
-    "autocompletion"
+    "autocompletion",
+    "es6"
   ],
   "author": "Alex Garrett",
   "license": "MIT",
