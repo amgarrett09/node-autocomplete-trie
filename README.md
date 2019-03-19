@@ -4,7 +4,7 @@ This library uses a prefix trie data structure to efficiently generate
 autocomplete suggestions.
 
 ## Usage
-```
+```javascript
 const AutoComplete = require('autocomplete-trie');
 const trie = new AutoComplete();
 ```
