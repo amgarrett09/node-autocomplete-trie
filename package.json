@@ -1,6 +1,6 @@
 {
   "name": "trie-autocomplete",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A fast and lightweight autocomplete library using a trie data structure.",
   "main": "index.js",
   "scripts": {
