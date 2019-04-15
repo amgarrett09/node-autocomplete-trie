@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+
 class TrieNode {
   constructor(char) {
     this.char = char;
@@ -15,12 +17,12 @@ class AutoComplete {
   add(word) {
     let current = this.root;
 
-    for (let i = 0; i < word.length; i += 1) {
+    for (let i = 0, len = word.length; i < len; i += 1) {
       const ch = word[i];
       let found = false;
 
       // Search all children for the character we're looking for
-      for (let j = 0; j < current.children.length; j += 1) {
+      for (let j = current.children.length; j--;) {
         const child = current.children[j];
         // If we find it, change current node to that child
         if (child.char === ch) {
@@ -51,12 +53,12 @@ class AutoComplete {
     let current = this.root;
 
     // For each char in the word
-    for (let i = 0; i < word.length; i += 1) {
+    for (let i = 0, len = word.length; i < len; i += 1) {
       const ch = word[i];
       let found = false;
 
       // Search each child of the current node
-      for (let j = 0; j < current.children.length; j += 1) {
+      for (let j = current.children.length; j--;) {
         const child = current.children[j];
 
         if (child.char === ch) {
@@ -77,11 +79,11 @@ class AutoComplete {
   delete(word) {
     let current = this.root;
 
-    for (let i = 0; i < word.length; i += 1) {
+    for (let i = 0, len = word.length; i < len; i += 1) {
       const ch = word[i];
       let found = false;
 
-      for (let j = 0; j < current.children.length; j += 1) {
+      for (let j = current.children.length; j--;) {
         const child = current.children[j];
 
         if (child.char === ch) {
@@ -134,11 +136,11 @@ class AutoComplete {
     let current = this.root;
 
     // Find the node corresponding to the end of the snippet, if it exists
-    for (let i = 0; i < chars.length; i += 1) {
+    for (let i = 0, len = chars.length; i < len; i += 1) {
       const ch = chars[i];
       let found = false;
 
-      for (let j = 0; j < current.children.length; j += 1) {
+      for (let j = current.children.length; j--;) {
         const child = current.children[j];
 
         if (child.char === ch) {
